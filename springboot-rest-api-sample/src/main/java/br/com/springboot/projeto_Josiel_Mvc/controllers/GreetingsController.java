@@ -25,4 +25,12 @@ public class GreetingsController {
     public String greetingText(@PathVariable String name) {
         return "Projeto Cadastro Spring Boot API MVC: " + name + "!";     
     }
+    
+    @RequestMapping(value = "/olamundo/{teste}", method =  RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String retornoOlamundo(@PathVariable String teste) {
+    	return "Testanto método Hello Word -----> "+teste+"!! ";
+    	
+    }
+    
 }
